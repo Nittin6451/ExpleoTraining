@@ -5,41 +5,37 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-
+ 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-
+ 
 public class LoginPageAction {
-	
-	LoginPageLocators loginPageLocators=null;
-	String strUsername, strPassword,strURL;
 	WebDriver driver;
-	 
-	public LoginPageAction() {
-		loginPageLocators = new LoginPageLocators();
-		
-		PageFactory.initElements(HelperClass.getDriver(),loginPageLocators);
-	}
-	 
-		
-		public void setUserName(String strUserName) {
-		loginPageLocators.username.sendKeys(strUserName);
-	}
-		public void setPassword(String strPassword) {
-		loginPageLocators.password.sendKeys(strPassword);
-	}
-		public void clickLogin() {
-			loginPageLocators.loginbuttton.click();
-		}
-
-		public void loginInfo(String strUsername,String strPassword) {
-			
-
-			setUserName(strUsername);
-			setPassword(strPassword);
-			
-		}
-		
+	LoginPageLocators LoginOhrmLocators = null;
+	String url,username,password;
 	
+	public LoginPageAction() {
+		this.LoginOhrmLocators = new LoginPageLocators();
+		PageFactory.initElements(HelperClass.getDriver(), LoginOhrmLocators);
 	}
-
+	
+	public void setUserName(String username) {
+		LoginOhrmLocators.user.sendKeys(username);
+	}
+	
+	public void setPassword(String password) {
+		LoginOhrmLocators.password.sendKeys(password);
+	}
+	
+	public void clickLogin() {
+		LoginOhrmLocators.loginButton.click();
+	}
+	
+	public void login(String strUserName) {
+		setUserName(strUserName);
+		
+	}
+	public void loginpwd(String strPassword) {
+		setPassword(strPassword);
+	}
+}

@@ -1,6 +1,8 @@
-Feature: Login to HRM Application
+Feature: loging into hrm application
 
-  Scenario: Login with Vaild credentials
-    Given User is on HRMLogin page 
-    When User enters username , password and clicks login
-    Then User should be able to Login Successfully and Home page opens
+  Scenario: loging using valid creds
+    Given user on homepage
+    When user enter id
+    And enters pass
+    And click login
+    Then navigates to homepage
