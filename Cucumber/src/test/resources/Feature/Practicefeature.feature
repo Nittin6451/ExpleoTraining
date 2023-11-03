@@ -1,53 +1,22 @@
-Feature: Logining into a Web Application
-
-Background:
-	Given user is on the Login page "https://opensource-demo.orangehrmlive.com/"
-
-@ValidCredentials
-
-Scenario Outline: Login Using VaildCredentials 
-
-
-When User enters the username as "<username>"
-And User enters the password as "<password>"
-And User Clicks the Login button
-Then user is navigated to homepage
-Then User should be able to login successfully
-
-Examples:
-	| username | password |
-	| Admin    | admin123 |
-
-@InvaildCredentials @InvalidUsernameAndPassword
-
-Scenario: Login Using InVaildCredentials 
-
-
-When User enters the invaildusername as "<username>"
-And User enters the invaildpassword as "<password>"
-And User Clicks the Login button
-Then user is navigated to homepage
-Then Login will be unsuccessfull
-
-Examples:
-| username | password |
-| admin    | amid2    |
-
-@InvalidCredentials @BlankCredentials
-
-Scenario: Login Using InVaildBlankCredentials 
-
-
-When User enters the Blankusername as "<username>"
-And User enters the Blankpassword as "<password>"
-And User Clicks the Login button
-Then user is navigated to homepage
-Then user gets a error message 
-
-
-Examples:
-	| username | password |
-	|          |          |
-
-
-
+Feature: Login to HRM application using valid and invalid Credentials
+  
+ 
+  @ValidCredentials
+  Scenario: Login with Valid credentials
+    Given User is on HRMLogin Webpage
+    When User provides valid credentials
+    | Username | Password |
+    | Admin    | admin123 |
+    
+    Then User should be able to login successfully and see homePage
+   
+ 
+  @InvalidCredentials
+  Scenario Outline: Login with InValid credentials
+    Given User is on HRMLogin Webpage
+    When User provides valid credentials
+    | Username | Password |
+    | Admin1   | admin123 |
+    | Admin123    | admin123 |
+    Then User able to see unsuccessfull with error message
+ 

@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features ="src\\test\\resources\\Feature\\ScenarioOutline.feature",glue ="CucumberPratice" )
+@CucumberOptions(features ="",glue ="" )
 public class Runner  {
 
 }
