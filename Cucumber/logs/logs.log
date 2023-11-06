@@ -1,0 +1,20 @@
+[INFO ] 2023-11-06 15:19:48.138 [main] TestLogger - Logged into Myntra
+[ERROR] 2023-11-06 15:19:48.730 [main] TestLogger - Exception occured
+java.lang.Exception: element Not Found
+	at com.log4jConcept.TestLogger.main(TestLogger.java:28) [test-classes/:?]
+[INFO ] 2023-11-06 15:19:51.534 [main] TestLogger - Quitting the driver
+[INFO ] 2023-11-06 15:20:31.862 [main] TestLogger - Logged into Myntra
+[ERROR] 2023-11-06 15:20:41.933 [main] TestLogger - Exception occured
+java.lang.Exception: element Not Found
+	at com.log4jConcept.TestLogger.main(TestLogger.java:28) [test-classes/:?]
+[INFO ] 2023-11-06 15:20:43.387 [main] TestLogger - Quitting the driver
+[INFO ] 2023-11-06 15:23:38.747 [main] TestLogger - Logged into Myntra
+[ERROR] 2023-11-06 15:23:48.925 [main] TestLogger - Exception occured
+java.lang.Exception: element Not Found
+	at com.log4jConcept.TestLogger.main(TestLogger.java:28) [test-classes/:?]
+[INFO ] 2023-11-06 15:23:49.606 [main] TestLogger - Quitting the driver
+[INFO ] 2023-11-06 15:30:18.826 [main] TestLogger - Logged into google
+[INFO ] 2023-11-06 15:30:19.587 [main] TestLogger - Quitting the driver
+[INFO ] 2023-11-06 15:41:07.925 [main] TestLogger - Using impliciltyWait
+[INFO ] 2023-11-06 15:41:17.790 [main] TestLogger - Logged into google
+[INFO ] 2023-11-06 15:41:18.468 [main] TestLogger - Quitting the driver
